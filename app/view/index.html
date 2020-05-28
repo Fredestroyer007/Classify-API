@@ -1,4 +1,4 @@
-<html lang='en'>
+<html lang='fr'>
 <head>
   <meta charset='utf-8'>
   <link rel='stylesheet' href='../static/style.css'>
@@ -7,10 +7,12 @@
 <body>
 <div>
   <div class='center'>
-    <div class='title'>Classify Bear Images 🐻</div>
+    <div class='title'>API pour l'application Classify</div>
     <p>
-      Use images of <strong>teddy</strong> bears, <strong>black</strong> bears, <strong>grizzly</strong> bears, or
-      all three!
+      Sélectionner un fichier audio et le pouvoir de l'intelligence artificielle va vous spécifiez le genre parmis les suivants : l'électronique, l'expérimental, le folk, le hip-hop, l'instrumental, l'international, le pop et le rock.
+    </p>
+    <p>
+      Veuillez prendre note que la librairie Librosa est affreusement lente et une prédiction peut prendre plusieurs dizaines de secondes pour un fichier audio assez volumineux.
     </p>
     <div class='content'>
       <div class='no-display'>
@@ -18,19 +20,19 @@
                class='no-display'
                type='file'
                name='file'
-               accept='image/*'
+               accept='audio/*'
                onchange='showPicked(this)'>
       </div>
-      <button class='choose-file-button' type='button' onclick='showPicker()'>Select Image</button>
+      <!-- Bouton pour sélectionner un fichier audio -->
+      <button class='choose-file-button' type='button' onclick='showPicker()'>Sélectionner un fichier audio</button>
       <div class='upload-label'>
-        <label id='upload-label'>No file chosen</label>
+        <label id='upload-label'>Aucun fichier sélectionner</label>
       </div>
-      <div>
-        <img id='image-picked' class='no-display' alt='Chosen Image' height='200'>
-      </div>
+      <!-- Bouton pour analyser un fichier audio -->
       <div class='analyze'>
-        <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Analyze</button>
+        <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Analyser</button>
       </div>
+      <!-- Retour du genre du fichier audio -->
       <div class='result-label'>
         <label id='result-label'></label>
       </div>
