@@ -1,15 +1,7 @@
-# Starter for deploying [fast.ai](https://www.fast.ai) models on [Render](https://render.com)
+# API pour l'application Classify
 
-This repo can be used as a starting point to deploy [fast.ai](https://github.com/fastai/fastai) models on Render.
+Cette repo est l'API dans un contenant Docker pour l'application Classify qui catégorise le genre musical d'un extrait audio par apprentissage profond.
 
-The sample app described here is up at https://fastai-v3.onrender.com. Test it out with bear images!
+L'application Classify est développé dans le cadre d'un projet d'intégration à la session d'hiver 2020 au Collège de Bois-de-Boulogne.
 
-You can test your changes locally by installing Docker and using the following command:
-
-```
-docker build -t fastai-v3 . && docker run --rm -it -p 5000:5000 fastai-v3
-```
-
-The guide for production deployment to Render is at https://course.fast.ai/deployment_render.html.
-
-Please use [Render's fast.ai forum thread](https://forums.fast.ai/t/deployment-platform-render/33953) for questions and support.
+Basé sur l'implémentation par [Fastai](https://course.fast.ai/deployment_render.html) pour un déploiement sur [Render](https://render.com/).
